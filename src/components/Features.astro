@@ -1,5 +1,6 @@
 ---
 // Imports
+import { Icon } from "astro-icon/components";
 import Image from "astro/components/Image.astro"; // Importing the Image component for optimized image handling
 import SourceImg from "../images/feature_panama_construccion.jpg"; // Importing the source image for the right column
 ---
@@ -24,17 +25,17 @@ import SourceImg from "../images/feature_panama_construccion.jpg"; // Importing 
           <!-- Individual feature item -->
           <li class="flex items-center gap-2">
             <!-- Icon for the feature item -->
-            <img src="/favicon.svg" alt="check" class="w-12" width="40" height="40" />
+            <Icon name={"service"} width={35} height={35} class="text-orion-gray-500" />
             <!-- Description of the feature -->
             <p class="text-reg">Experiencia en gestión de proyectos de construcción</p>
           </li>
           <!-- Repeat for other items -->
           <li class="flex items-center gap-2">
-            <img src="/favicon.svg" alt="check" class="w-12" width="40" height="40" />
+            <Icon name={"service"} width={35} height={35} class="text-orion-gray-500" />
             <p class="text-reg">Equipo de expertos en ingeniería y arquitectura</p>
           </li>
           <li class="flex items-center gap-2">
-            <img src="/favicon.svg" alt="check" class="w-12" width="40" height="40" />
+            <Icon name={"service"} width={35} height={35} class="text-orion-gray-500" />
             <p class="text-reg">Enfoque en la eficiencia y la calidad del trabajo</p>
           </li>
         </ul>

@@ -2,7 +2,7 @@
   "name": "ventura-vista",
   "description": "A Modern Lightweight Astro template for construction companies.",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.4.1",
+    "astro-icon": "^1.1.0",
     "tailwindcss": "^3.4.1"
   }
 }

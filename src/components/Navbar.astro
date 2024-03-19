@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 
@@ -19,7 +20,9 @@ const getLinkClass = (isActive) => (isActive ? "text-orion-blue-700" : "text-gra
 <nav class="bg-gray-100 text-gray-900 absolute top-0 w-full px-4 py-3">
   <div class="container max-w-[1440px] mx-auto flex items-center justify-between py-2">
     <div class="flex items-center space-x-4">
-      <a href="/"><Image src="/Logo Horizontal.svg" alt="Orion Web Build" width={150} height={64} loading="eager" /></a>
+      <a href="/">
+        <Icon name={"logo"} width={150} height={50} class="text-white" />
+      </a>
     </div>
     <div class="hidden space-x-4 md:flex">
       {

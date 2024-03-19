@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Icon } from "astro-icon/components";
 // Footer links data
 const footerLinks = [
   { href: "#", label: "Inicio" },
@@ -11,9 +11,9 @@ const footerLinks = [
 
 // Social icons data
 const socialIcons = [
-  { href: "#", src: "/icons/FacebookIcn.svg", alt: "Facebook" },
-  { href: "#", src: "/icons/InstagramIcn.svg", alt: "Instagram" },
-  { href: "#", src: "/icons/XIcn.svg", alt: "X" },
+  { href: "#", src: "FacebookIcn", alt: "Facebook" },
+  { href: "#", src: "InstagramIcn", alt: "Instagram" },
+  { href: "#", src: "XIcn", alt: "X" },
 ];
 ---
 
@@ -22,7 +22,7 @@ const socialIcons = [
     <div class="grid grid-cols-1 md:grid-cols-3 items-center px-2 md:px-4">
       <div id="footer-logo" class="flex items-center justify-center md:justify-start space-x-4 mb-4 md:mb-0">
         <a href="/">
-          <Image src="/Logo Horizontal White.svg" alt="Orion Web Build" width={100} height={64} loading="eager" />
+          <Icon name={"logo-white"} width={150} height={50} class="text-white" />
         </a>
       </div>
       <div id="footer-links" class="flex items-center space-x-4 justify-center">
@@ -39,7 +39,7 @@ const socialIcons = [
           {
             socialIcons.map((icon) => (
               <a href={icon.href} class="text-white pt-4 md:pt-0 text-sm">
-                <Image src={icon.src} alt={icon.alt} width={24} height={24} loading="eager" />
+                <Icon name={icon.src} width={24} height={24} />
               </a>
             ))
           }
