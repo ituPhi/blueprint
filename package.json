@@ -1,7 +1,8 @@
 {
-  "name": "orion-web-build",
+  "name": "ventura-vista",
+  "description": "A Modern Lightweight Astro template for construction companies.",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

@@ -1,29 +1,29 @@
-**Proyecto del Sitio Web Orion Stars Panamá**
+**Proyecto del Sitio Web VentureVista**
 
-Bienvenido al repositorio del proyecto del sitio web de Orion Stars Panamá. Este proyecto muestra los servicios y proyectos de una empresa de construcción con sede en Panamá.
+Bienvenido al repositorio del proyecto del sitio web de VentureVista, una plantilla moderna y ligera construida con Astro. Este proyecto está diseñado para ser una base versátil para cualquier tipo de sitio web, desde portfolios hasta sitios de empresas, aprovechando la eficiencia y la velocidad de Astro.
 
 ## Visión General
 
-El proyecto incluye una variedad de componentes como cabeceras, características, banners de logotipos, proyectos destacados y más, todo construido usando Astro. Además, hay archivos markdown para información detallada del proyecto, código PHP para el manejo de formularios, Tailwind CSS para el estilo y configuraciones SEO para mejorar la visibilidad en motores de búsqueda.
+VentureVista incluye una amplia gama de componentes reutilizables y optimizados para la velocidad, como cabeceras dinámicas, secciones de características, banners, y más, todo construido utilizando Astro. Se integra con archivos markdown para contenido fácil de editar, soporte para Tailwind CSS para un diseño personalizable y configuraciones SEO avanzadas para maximizar la visibilidad en motores de búsqueda.
 
 ## Estructura de Archivos
 
-- `src/pages/index.astro`: Contenido de la página de inicio con propiedades SEO y componentes de layout.
-- `src/pages/proyectos/[...slugs].astro`: Páginas detalladas de proyectos con datos e imágenes del proyecto.
-- `src/components/`: Contiene varios componentes de Astro como HeroProjects, Card, Navbar, Footer, ServicesGrid, etc.
-- `src/content/`: Archivos markdown para información detallada del proyecto.
-- `public/`: Archivos de logotipos SVG.
-- `src/layouts/Layout.astro`: Componente de layout con configuraciones SEO y estructura común de página.
+- `src/pages/index.astro`: Página de inicio con SEO optimizado y componentes de diseño.
+- `src/pages/blog/[slug].astro`: Plantillas para entradas de blog, con soporte para cargar contenido desde archivos markdown.
+- `src/components/`: Contiene componentes de Astro reutilizables como Header, Card, Navbar, Footer, BlogPost, etc.
+- `src/content/`: Archivos markdown para entradas de blog y contenido editable.
+- `public/`: Recursos estáticos como imágenes y archivos SVG.
+- `src/layouts/MainLayout.astro`: Componente de layout principal con configuraciones SEO y diseño común para todas las páginas.
 
 ## Empezando
 
 1. Clona el repositorio.
-2. Instala las dependencias: `npm install`.
-3. Inicia el servidor de desarrollo: `npm run dev`.
+2. Instala las dependencias con `npm install`.
+3. Inicia el servidor de desarrollo con `npm run dev`.
 
 ## Detalles Adicionales
 
-- Utiliza Tailwind CSS para el estilo y Astro para construir sitios estáticos.
-- Asegúrate de actualizar las propiedades SEO y los datos del proyecto para una optimización óptima en motores de búsqueda.
+- Utiliza Tailwind CSS para un diseño totalmente personalizable y Astro para generar sitios estáticos de alta velocidad.
+- Personaliza las propiedades SEO y el contenido para adaptar el sitio a tus necesidades específicas.
 
-¡Explora la base de código, realiza mejoras y disfruta construyendo con Orion Stars Panamá!
+Explora la base de código, adapta los componentes a tu proyecto y disfruta de la velocidad y flexibilidad que ofrece VentureVista!
