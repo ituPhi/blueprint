@@ -1,14 +1,19 @@
 ---
-import Image from "astro/components/Image.astro";
+import Image from "astro/components/Image.astro"; // Importing the Image component from Astro's built-in components
 ---
 
 <div class="w-full">
+  <!-- Container with max width of 1440px, padding, and a background gradient from gray to darker gray -->
   <div
     class="container mx-auto max-w-[1440px] py-12 sm:py-16 px-2 sm:px-6 md:px-4 lg:px-16 bg-gradient-to-r from-orion-gray-500 to-orion-gray-800 text-gray-50"
   >
+    <!-- Flex container that changes from column to row layout on larger screens -->
     <div class="flex flex-col lg:flex-row items-center sm:items-start lg:items-center">
+      <!-- Title text that scales up for small devices and aligns differently based on screen size -->
       <h2 class="text-4xl sm:text-5xl font-bold leading-tight text-balance lg:w-1/2 text-center sm:text-start">Empresas que Confían en Nosotros</h2>
+      <!-- Grid container for logos with responsive column count and gap spacing -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-8 pt-12 lg:pt-0">
+        <!-- Repeated Image component instances for displaying logos -->
         <Image src="/logosTemp.png" alt="hero" class="w-40" width={200} height={200} />
         <Image src="/logosTemp.png" alt="hero" class="w-40" width={200} height={200} />
         <Image src="/logosTemp.png" alt="hero" class="w-40" width={200} height={200} />

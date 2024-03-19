@@ -1,12 +1,19 @@
 ---
+// Importing the Image component from Astro's asset handling utilities
 import { Image } from "astro:assets";
+
+// Destructuring and setting default values for props passed to the ProjectCard component
 const { title = "Remodelación De Galera", description = "Lorem ipsum dolor sit amet", src = "src", link = "link" } = Astro.props;
 ---
 
+<!-- Link wrapping the entire card, making the whole card clickable. The 'href' attribute is dynamically set based on the 'link' prop. -->
 <a href={link} class="block no-underline shadow-md p-4 rounded-md hover:bg-orion-gray-50 transition-colors">
   <div class="flex flex-col gap-4">
+    <!-- Displaying an image using the Image component from Astro, with source, alt text, and styling attributes. The 'src' prop is used for the image source. -->
     <Image src={src} alt="remodelacion-galera" class="w-full object-cover aspect-video" width={800} height={400} />
+    <!-- Title of the project card, content dynamically set by the 'title' prop. -->
     <h2 class="text-xl font-semibold">{title}</h2>
+    <!-- Description text of the project, content dynamically set by the 'description' prop. -->
     <p class="text-reg">
       {description}
     </p>

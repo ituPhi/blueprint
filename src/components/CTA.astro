@@ -1,10 +1,14 @@
 ---
+// Default props for the component, providing default values for title and description
 const { title = "title", description = "description" } = Astro.props;
 ---
 
 <div class="max-w-[1440px] mx-auto h-[500px] bg-[url('/CTAbg.webp')]">
+  <!-- Container for the CTA, setting max width, auto margins, fixed height, and background image -->
   <div class="flex flex-col px-2 sm:px-4 md:px-6 lg:px-16 max-w-[900px] h-full justify-center gap-4">
+    <!-- Title of the CTA, responsive font size -->
     <h2 class="text-4xl sm:text-5xl md:text-5xl font-semibold text-white">{title}</h2>
+    <!-- Description text, with a larger font size for readability -->
     <p class="text-white text-xl">{description}</p>
   </div>
 </div>

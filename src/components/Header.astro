@@ -1,13 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import Card from "../components/Card.astro";
-import cover from "../images/frontCover_OrionStars_Panama_Construction.jpg";
+import { Image } from "astro:assets"; // Importing the Image component from Astro's built-in asset handling
+import Card from "../components/Card.astro"; // Importing the Card component from the components directory
+import cover from "../images/frontCover_OrionStars_Panama_Construction.jpg"; // Importing the cover image from the images directory
 ---
 
 <div class="h-full mx-auto">
+  <!-- Displaying the cover image with specific attributes -->
   <Image id="coverImage" src={cover} alt="Orion Stars Panama" class="object-cover mx-auto" width={"1828"} height={"700"} loading="eager" />
 
+  <!-- Including the Card component below the image -->
   <Card />
 </div>
 
+<!-- This is a commented-out alternative version of the Image component with different styling and dimensions -->
 <!-- <Image id="coverImage" src={cover} alt="Orion Stars Panama" class="mx-auto shadow-lg" width={1828} height={200} loading="eager" /> -->

@@ -1,26 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Features from "../components/Features.astro";
-import LogosBanner from "../components/LogosBanner.astro";
-import HeroProjects from "../components/HeroProjects.astro";
-import CTA from "../components/CTA.astro";
-import HeroServices from "../components/HeroServices.astro";
+import Layout from "../layouts/Layout.astro"; // Import the Layout component
+import Header from "../components/Header.astro"; // Import the Header component
+import Features from "../components/Features.astro"; // Import the Features component
+import LogosBanner from "../components/LogosBanner.astro"; // Import the LogosBanner component
+import HeroProjects from "../components/HeroProjects.astro"; // Import the HeroProjects component
+import CTA from "../components/CTA.astro"; // Import the CTA (Call To Action) component
+import HeroServices from "../components/HeroServices.astro"; // Import the HeroServices component
 
-// SEO props based on the content and purpose of the home page
+// Define SEO properties for the home page
 const seoProps = {
-  title: "Orion Stars Panama - Construcción e Infraestructura de Calidad",
+  title: "Orion Stars Panama - Construcción e Infraestructura de Calidad", // Page title
   description:
-    "Especializados en servicios integrales de consultoría para proyectos de infraestructura y construcción en Panamá, comprometidos con la excelencia y la satisfacción del cliente.",
-  canonicalUrl: "https://ostarscompany.com/",
-  ogTitle: "Orion Stars Panama: Líderes en Construcción e Infraestructura en Panamá",
-  ogDescription: "Descubre cómo transformamos visiones en realidad con proyectos de construcción innovadores y de alta calidad.",
-  ogImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Assume a path to an Open Graph image
-  twitterTitle: "Orion Stars Panama - Excelencia en Construcción",
+    "Especializados en servicios integrales de consultoría para proyectos de infraestructura y construcción en Panamá, comprometidos con la excelencia y la satisfacción del cliente.", // Page description
+  canonicalUrl: "https://ostarscompany.com/", // Canonical URL of the page
+  ogTitle: "Orion Stars Panama: Líderes en Construcción e Infraestructura en Panamá", // Open Graph title
+  ogDescription: "Descubre cómo transformamos visiones en realidad con proyectos de construcción innovadores y de alta calidad.", // Open Graph description
+  ogImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Open Graph image URL
+  twitterTitle: "Orion Stars Panama - Excelencia en Construcción", // Twitter card title
   twitterDescription:
-    "Comprometidos con ofrecer soluciones de construcción personalizadas y de alta calidad. Conoce más sobre nuestros proyectos y servicios.",
-  twitterImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Assume a path to a Twitter Card image
-  facebookImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Assume a path to a Twitter Card image
+    "Comprometidos con ofrecer soluciones de construcción personalizadas y de alta calidad. Conoce más sobre nuestros proyectos y servicios.", // Twitter card description
+  twitterImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Twitter card image URL
+  facebookImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Facebook card image URL (same as Twitter in this case)
 };
 ---
 
