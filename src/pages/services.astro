@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import TwoColumCard from "../components/TwoColumCard001.astro";
+import CTA from "../components/CTA.astro";
+import type { Code } from "astro:components";
+
+const seoProps = {
+  title: "Servicios de Consultoría y Construcción - Orion Stars Panama",
+  description:
+    "Explora nuestros servicios integrales en consultoría para proyectos de infraestructura y construcción, dedicados a brindar soluciones personalizadas y de alta calidad.",
+  canonicalUrl: "https://ostarscompany.com/services/",
+  ogTitle: "Explora Nuestros Servicios en Construcción e Infraestructura",
+  ogDescription:
+    "En Orion Stars Panama ofrecemos asesoría y servicios de construcción integral para transformar tu visión en realidad con excelencia y calidad.",
+  ogImage: "https://ostarscompany.com/public/remodelacion-galera.jpg",
+  twitterTitle: "Servicios de Consultoría y Construcción en Orion Stars Panama",
+  twitterDescription: "Descubre cómo podemos agregar valor a tus proyectos de construcción e infraestructura con nuestros servicios personalizados.",
+  twitterImage: "https://ostarscompany.com/public/remodelacion-galera.jpg",
+};
+---
+
+<Layout {...seoProps}>
+  <main>
+    <Card
+      fullScreen={false}
+      title="Nuestros Servicios en Consultoría y Construcción"
+      description="Nuestro objetivo es brindar a nuestros clientes una asesoría integral y de alta calidad para el planeamiento y desarrollo de obras de infraestructura de excelencia."
+      buttons={false}
+    />
+    <TwoColumCard />
+    <ServicesGrid />
+    <CTA
+      title="Soluciones de Construcción Personalizadas"
+      description="Somos una empresa de construcción comprometida con la excelencia y la satisfacción del cliente."
+    />
+  </main>
+</Layout>

@@ -1,0 +1,61 @@
+---
+// Import the PrimaryButton component
+import PrimaryButton from "../components/PrimaryButton.astro";
+---
+
+<form action="https://api.web3forms.com/submit" method="POST" class="bg-card text-card-foreground shadow-sm p-6" enctype="multipart/form-data">
+  <!-- WebForm required and optional fields -->
+  <input type="hidden" name="access_key" value="" />
+  <input type="hidden" name="subject" value="Tienes un correo de Orion Stars" />
+  <input type="hidden" name="from_name" value="Orion Stars" />
+  <input type="hidden" name="replyto" value="customer@example.com" />
+  <input type="hidden" name="redirect" value="https://ostarscompany.com/gracias" />
+  <div class="text-white">
+    <h3 class="text-2xl font-semibold leading-none tracking-tight">Ponte en Contacto con Nosotros</h3>
+    <p class="text-sm text-muted-foreground mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="space-y-4 mt-4 text-white">
+    <!-- Name Field -->
+    <div>
+      <label for="name" class="text-sm font-medium leading-none">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        class="text-gray-950 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        placeholder="Su nombre"
+        required
+      />
+    </div>
+
+    <!-- Email Field -->
+    <div>
+      <label for="email" class="text-sm font-medium leading-none">Email</label>
+      <input
+        type="email"
+        name="email"
+        class="text-gray-950 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        placeholder="Su Email"
+        required
+      />
+    </div>
+
+    <!-- Message Field -->
+    <div>
+      <label for="message" class="text-sm font-medium leading-none">Mensaje</label>
+      <textarea
+        name="message"
+        class="text-gray-950 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        placeholder="Qué Necesitas"
+        required></textarea>
+    </div>
+
+    <!-- Submit Button - Adjusted to use Tailwind CSS for styling -->
+    <button
+      type="submit"
+      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+    >
+      Enviar
+    </button>
+  </div>
+</form>

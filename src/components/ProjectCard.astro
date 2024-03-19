@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+const { title = "Remodelación De Galera", description = "Lorem ipsum dolor sit amet", src = "src", link = "link" } = Astro.props;
+---
+
+<a href={link} class="block no-underline">
+  <div class="flex flex-col gap-4">
+    <Image src={src} alt="remodelacion-galera" class="w-full object-cover aspect-square" width={400} height={400} />
+    <h2 class="text-xl font-semibold">{title}</h2>
+    <p class="text-reg">
+      {description}
+    </p>
+  </div>
+</a>

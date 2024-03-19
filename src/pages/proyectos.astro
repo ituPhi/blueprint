@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroProjects from "../components/HeroProjects.astro";
+import CTA from "../components/CTA.astro";
+import Card from "../components/Card.astro";
+
+const seoProps = {
+  title: "Proyectos de Construcción Innovadores - Orion Stars Panama",
+  description:
+    "Descubre nuestra cartera de proyectos exitosos, que demuestra nuestra dedicación y experiencia en el desarrollo de obras de infraestructura de excelencia.",
+  canonicalUrl: "https://ostarscompany.com/proyectos/",
+  ogTitle: "Conoce Nuestros Proyectos Exitosos en Orion Stars Panama",
+  ogDescription:
+    "Nuestra galería de proyectos refleja la innovación y calidad en cada construcción. Explora cómo contribuimos al desarrollo de infraestructura con excelencia.",
+  ogImage: "https://ostarscompany.com/public/remodelacion-galera.jpg",
+  twitterTitle: "Explora Proyectos de Construcción de Orion Stars Panama",
+  twitterDescription:
+    "Sumérgete en nuestros proyectos y descubre el impacto de nuestras soluciones de construcción personalizadas y de alta calidad.",
+  twitterImage: "https://ostarscompany.com/public/remodelacion-galera.jpg",
+};
+---
+
+<Layout {...seoProps}>
+  <main>
+    <Card
+      fullScreen={false}
+      title="Conoce Nuestros Proyectos Exitosos"
+      description="Nuestro objetivo es brindar a nuestros clientes una asesoría integral y de alta calidad para el planeamiento y desarrollo de obras de infraestructura de excelencia."
+      buttons={false}
+    />
+    <HeroProjects grid="large" />
+    <CTA
+      title="Soluciones de Construcción Personalizadas"
+      description="Somos una empresa de construcción comprometida con la excelencia y la satisfacción del cliente."
+    />
+  </main>
+</Layout>

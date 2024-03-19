@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
+
+@layer base {
+  h1 {
+    @apply text-[46px] py-28;
+    @apply text-red-500 /* Add any other utility classes here */;
+  }
+}

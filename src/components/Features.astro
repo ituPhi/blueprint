@@ -1,0 +1,35 @@
+---
+import Image from "astro/components/Image.astro";
+import SourceImg from "../images/feature_panama_construccion.jpg";
+---
+
+<div class="container max-w-[1440px] p-2 md:p-4 xlg:p-0 bg-orion-blue-50 mx-auto">
+  <div id="container-content" class="py-12 md:py-28 px-2 sm:px-2 md:px-4 lg:px-16">
+    <div class="grid sm:grid-cols-2 items-center gap-4 sm:gap-6">
+      <div id="left-col" class="flex flex-col gap-6 text-orion-gray-600">
+        <h2 class="text-3xl sm:text-4xl font-bold leading-tight text-pretty max-w-[600px]">Valor Agregado para tus Proyectos de Construcción</h2>
+        <p class="text-orion-gray-950">
+          Nuestra empresa ofrece servicios de consultoría integral para proyectos de infraestructura y construcción. Trabajamos de cerca con nuestros
+          clientes para brindar soluciones personalizadas que agreguen valor a sus proyectos.
+        </p>
+        <ul class="flex flex-col gap-4 text-orion-gray-950">
+          <li class="flex items-center gap-2">
+            <img src="/favicon.svg" alt="check" class="w-12" width="40" height="40" />
+            <p class="text-reg">Experiencia en gestión de proyectos de construcción</p>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="/favicon.svg" alt="check" class="w-12" width="40" height="40" />
+            <p class="text-reg">Equipo de expertos en ingeniería y arquitectura</p>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="/favicon.svg" alt="check" class="w-12" width="40" height="40" />
+            <p class="text-reg">Enfoque en la eficiencia y la calidad del trabajo</p>
+          </li>
+        </ul>
+      </div>
+      <div id="right-col" class="flex items-center justify-center">
+        <Image src={SourceImg} alt="hero" class="w-full" width={400} height={400} />
+      </div>
+    </div>
+  </div>
+</div>

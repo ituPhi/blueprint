@@ -1,0 +1,56 @@
+---
+// Import the getCollection function and Image component
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("proyectos");
+
+import ProjectCard from "./ProjectCard.astro";
+import PrimaryButton from "./PrimaryButton.astro";
+let { grid = "small" } = Astro.props;
+let maxProjects = 3;
+let hideP = "hidden";
+let hidePa = "block";
+if (grid === "large") {
+  hideP = "block";
+  hidePa = "hidden";
+  maxProjects = 6; // this controls how many project we can map over
+}
+---
+
+<div class="container max-w-[1440px] p-2 md:p-4 xlg:p-0 bg-orion-blue-50 mx-auto">
+  <div class="px-2 sm:px-4 md:px-6 lg:px-12 py-12 sm:py-12 text-orion-gray-600 flex flex-col gap-4">
+    <h2 class="text-3xl font-bold">Proyectos Recientes</h2>
+    <p class={`w-full md:w-1/2 p-2  text-orion-gray-950 ${hidePa}`}>
+      Explora nuestra selección de proyectos recientes y descubre cómo nuestra experiencia y dedicación se traducen en resultados excepcionales. Cada
+      proyecto es un testimonio de nuestra pasión por la excelencia y nuestro compromiso con la calidad.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pb-6 px-2 sm:pb-12 sm:px-6 lg:px-12 text-orion-gray-600">
+    {
+      projects
+        .slice(0, maxProjects)
+        .map((project) => (
+          <ProjectCard
+            title={project.data.title}
+            description={project.data.description}
+            src={project.data.cover}
+            link={`/proyectos/${project.slug}`}
+          />
+        ))
+    }
+  </div>
+  <div class={`w-full flex justify-end px-12 pb-12 ${hidePa}`}>
+    <PrimaryButton label="Saber Más" href="/proyectos" />
+  </div>
+</div>
+
+<!-- <li key={project.slug}>
+  <Image src={project.data.cover} alt={project.data.coverAlt || "Project cover image"} loading="lazy" width={725} height={600} />
+  <h2>{project.data.title}</h2>
+  <p>Detalle: {project.data.description}</p>
+  <p>Cliente: {project.data.client}</p>
+  <p>Objectivo: {project.data.objective}</p>
+  <p>Fecha: {new Date(project.data.date).toLocaleDateString()}</p>
+  <p>Tags: {project.data.tags.join(", ")}</p>
+</li> -->

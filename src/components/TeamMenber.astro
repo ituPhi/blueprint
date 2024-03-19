@@ -1,0 +1,9 @@
+---
+let { name, title, description } = Astro.props;
+---
+
+<div class="text-center max-w-64 flex flex-col gap-2">
+  <h2 class="text-xl">{name}</h2>
+  <small>{title}</small>
+  <p class="text-sm">{description}</p>
+</div>

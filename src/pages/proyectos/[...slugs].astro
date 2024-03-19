@@ -1,0 +1,124 @@
+---
+// Import the necessary functions
+import { Image } from "astro:assets";
+import Footer from "../../components/Footer.astro";
+import NavBar from "../../components/Navbar.astro";
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const allProjects = await getCollection("proyectos");
+  return allProjects.map((project) => ({
+    params: {
+      // Directly pass the slug as a string; Astro handles array conversion for dynamic routes
+      slugs: project.slug, // Assuming `project.slug` is a string like "project-01"
+    },
+  }));
+}
+
+// Correctly handle `slugs` whether it's an array or a string
+const slugs = Astro.params.slugs;
+// If `slugs` is an array, join it; if it's a string, use it directly
+const slug = Array.isArray(slugs) ? slugs.join("/") : slugs;
+
+// Fetch the project entry using the slug
+const project = await getEntry("proyectos", slug);
+const { Content } = await project.render();
+const date = new Date(project.data.fecha);
+const userTimezoneOffset = date.getTimezoneOffset() * 60000;
+const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
+---
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="description" content={`Learn more about ${project.data.title} - ${project.data.description}`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{project.data.title} - Orion Stars Panama</title>
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://ostarscompany.com/proyectos/${slug}`} />
+    <meta property="og:title" content={project.data.title} />
+    <meta property="og:description" content={project.data.description} />
+    <meta property="og:image" content={`https://ostarscompany.com/${project.data.cover}`} />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={`https://ostarscompany.com/proyectos/${slug}`} />
+    <meta name="twitter:title" content={project.data.title} />
+    <meta name="twitter:description" content={project.data.description} />
+    <meta name="twitter:image" content={`https://ostarscompany.com/${project.data.cover}`} />
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <NavBar />
+    <article class="flex flex-col flex-grow">
+      <div class="container max-w-[1440px] mx-auto text-orion-gray-50 flex flex-col flex-grow">
+        <Image
+          src={project.data.cover}
+          alt={project.data.coverAlt}
+          class="w-full max-h-[650px] object-cover object-top"
+          width={"400"}
+          height={"400"}
+        />
+        <div id="card" class="p-2 sm:p-4 md:p-16 bg-orion-gray-600 py-12 flex-grows lg:px-32">
+          <div class="flex flex-col sm:flex-row justify-between gap-16">
+            <div class="sm:w-1/2">
+              <h1 class="text-xl sm:text-3xl md:text-4xl pb-6 font-bold">{project.data.title}</h1>
+              <p class="text-md">{project.data.description}</p>
+            </div>
+            <div class="sm:text-xl">
+              <div class="grid grid-cols-2 gap-16">
+                <div class="w-1/2">
+                  <p class="font-bold">Fecha:</p>
+                  <p>{adjustedDate.toLocaleDateString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" })}</p>
+                </div>
+                <div class="w-full">
+                  <p class="font-bold">Cliente:</p>
+                  <p>{project.data.client}</p>
+                </div>
+              </div>
+              <div class="max-w-[500px]">
+                <p class="pt-4 font-bold">Objetivo:</p>
+                <p>{project.data.objective}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="container max-w-[1440px] mx-auto">
+      <div class="grid grid-cols-3">
+        <Image
+          src={project.data.imgGal01}
+          alt={project.data.imgGal01Alt}
+          class="object-cover w-full h-full aspect-square"
+          width={"800"}
+          height={"800"}
+        />
+        <Image
+          src={project.data.imgGal02}
+          alt={project.data.imgGal02Alt}
+          class="object-cover w-full h-full aspect-square"
+          width={"800"}
+          height={"800"}
+        />
+        <Image
+          src={project.data.imgGal03}
+          alt={project.data.imgGal03Alt}
+          class="object-cover w-full h-full aspect-square"
+          width={"800"}
+          height={"800"}
+        />
+      </div>
+    </div>
+    <Footer />
+  </body>
+
+  <style>
+    body {
+      background-color: #393b48;
+    }
+  </style>
+
+  <!-- <p>Published on: {new Date(project.data.date).toLocaleDateString()}</p> -->
+</html>

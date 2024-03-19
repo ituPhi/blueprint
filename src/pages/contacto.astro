@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import ContactForm from "./ContactForm001.astro";
+
+const seoProps = {
+  title: "Contáctanos - Orion Stars Panama",
+  description:
+    "Ponte en contacto con Orion Stars Panama para discutir tus proyectos de construcción y consultoría. Estamos aquí para ayudarte a realizar tus visiones.",
+  canonicalUrl: "https://ostarscompany.com/contacto/",
+  ogTitle: "Contáctate con Orion Stars Panama",
+  ogDescription:
+    "¿Tienes un proyecto en mente? Conversemos. Encuentra toda la información para comunicarte con nosotros y comenzar a dar vida a tus proyectos.",
+  ogImage: "https://ostarscompany.com/public/contact-image.jpg",
+  twitterTitle: "Orion Stars Panama - Contáctanos Hoy",
+  twitterDescription: "Estamos listos para escuchar sobre tus necesidades de construcción y consultoría. Contacta con Orion Stars Panama hoy.",
+  twitterImage: "https://ostarscompany.com/public/contact-image.jpg",
+};
+---
+
+<Layout {...seoProps}>
+  <main class="min-h-screen">
+    <div class="container max-w-[1440px] bg-orion-gray-950 min-h-screen mx-auto mt-12 py-6 sm:mt-0 sm:py-0">
+      <div class="grid sm:grid-cols-2 items-center h-screen">
+        <div id="left-col" class="flex flex-col gap-6 text-orion-gray-50 p-2 sm:p-6 md:p-4 lg:p-16">
+          <h2 class="text-4xl font-bold leading-tight text-pretty max-w-[600px]">Valor Agregado para tus Proyectos de Construcción</h2>
+          <p class="text-orion-gray-50">
+            Nuestra empresa ofrece servicios de consultoría integral para proyectos de infraestructura y construcción. Trabajamos de cerca con
+            nuestros clientes para brindar soluciones personalizadas que agreguen valor a sus proyectos.
+          </p>
+        </div>
+
+        <div
+          class="bg-cover bg-center sm:h-screen flex flex-col justify-center p-2 sm:p-6 md:p-4 lg:p-16"
+          style="background-image: url('/contact_modal.webp');"
+        >
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,61 @@
+---
+import ServiceItem from "./ServiceItem.astro";
+
+const services = [
+  {
+    title: "Construcción en General",
+    description:
+      "Servicio integral que abarca desde la edificación de estructuras nuevas hasta remodelaciones y ampliaciones de edificaciones existentes, incluyendo residenciales, comerciales e industriales.",
+  },
+  {
+    title: "Mantenimiento de estaciones de Combustible",
+    description:
+      "Servicios especializados en la revisión, reparación y actualización de las instalaciones de estaciones de servicio, incluyendo bombas, sistemas de pago y medidas de seguridad.",
+  },
+  {
+    title: "Diseño y confección de Planos",
+    description:
+      "Creación de planos arquitectónicos y de ingeniería para proyectos de construcción, remodelación o ampliación, garantizando el cumplimiento de normativas y optimización del espacio.",
+  },
+  {
+    title: "Instalación de Tanques de Combustible Aéreos y Soterrados",
+    description:
+      "Servicios de instalación de sistemas de almacenamiento de combustible, tanto sobre la superficie como subterráneos, cumpliendo con las normativas ambientales y de seguridad.",
+  },
+  {
+    title: "Suministro e Instalación de Plantas Eléctricas",
+    description:
+      "Provisión e instalación de generadores de energía eléctrica para garantizar el suministro continuo en caso de cortes de energía, adecuados para residencias, comercios o industrias.",
+  },
+  {
+    title: "Muelles, Estructuras Soterradas y Patios de Contenedores",
+    description:
+      "Construcción y mantenimiento de infraestructuras especializadas como muelles para carga y descarga, estructuras subterráneas para diferentes propósitos y áreas para el manejo y almacenamiento de contenedores.",
+  },
+  {
+    title: "Movimiento de Tierra y Topografía en General",
+    description:
+      "Servicios de preparación del terreno para proyectos de construcción, incluyendo excavaciones, rellenos y nivelación, así como mediciones topográficas para asegurar la precisión en la construcción.",
+  },
+  {
+    title: "Inspecciones de Obras",
+    description:
+      "Evaluación profesional de proyectos de construcción en curso o terminados para verificar el cumplimiento de especificaciones técnicas, normativas de construcción y estándares de calidad.",
+  },
+  {
+    title: "Pintura en General",
+    description:
+      "Servicios de pintura interior y exterior para edificaciones residenciales, comerciales e industriales, incluyendo preparación de superficies, aplicación de pinturas y acabados especiales.",
+  },
+  // Add more services as needed
+];
+---
+
+<div class="container max-w-[1440px] p-2 md:p-4 xlg:p-0 bg-orion-blue-50 mx-auto">
+  <div class="px-2 sm:px-6 md:px-12 py-24 text-orion-gray-600 flex flex-col gap-4">
+    <h2 class="text-3xl font-bold text-center max-w-[400px] mx-auto">Somos una empresa Dedicada a</h2>
+  </div>
+  <div class="grid sm:grid-cols-3 gap-12 pb-24 px-12 text-orion-gray-600">
+    {services.map((service) => <ServiceItem title={service.title} description={service.description} />)}
+  </div>
+</div>

@@ -1,0 +1,8 @@
+---
+const { title = "title", description = "description" } = Astro.props;
+---
+
+<div class="text-center flex flex-col gap-2">
+  <h3 class="text-xl font-semibold text-balance pb-2">{title}</h3>
+  <p>{description}</p>
+</div>

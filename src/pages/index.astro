@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Features from "../components/Features.astro";
+import LogosBanner from "../components/LogosBanner.astro";
+import HeroProjects from "../components/HeroProjects.astro";
+import CTA from "../components/CTA.astro";
+import HeroServices from "../components/HeroServices.astro";
+
+// SEO props based on the content and purpose of the home page
+const seoProps = {
+  title: "Orion Stars Panama - Construcción e Infraestructura de Calidad",
+  description:
+    "Especializados en servicios integrales de consultoría para proyectos de infraestructura y construcción en Panamá, comprometidos con la excelencia y la satisfacción del cliente.",
+  canonicalUrl: "https://ostarscompany.com/",
+  ogTitle: "Orion Stars Panama: Líderes en Construcción e Infraestructura en Panamá",
+  ogDescription: "Descubre cómo transformamos visiones en realidad con proyectos de construcción innovadores y de alta calidad.",
+  ogImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Assume a path to an Open Graph image
+  twitterTitle: "Orion Stars Panama - Excelencia en Construcción",
+  twitterDescription:
+    "Comprometidos con ofrecer soluciones de construcción personalizadas y de alta calidad. Conoce más sobre nuestros proyectos y servicios.",
+  twitterImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Assume a path to a Twitter Card image
+  facebookImage: "https://ostarscompany.com/remodelacion-galera.jpg", // Assume a path to a Twitter Card image
+};
+---
+
+<Layout {...seoProps}>
+  <main>
+    <Header />
+    <Features />
+    <LogosBanner />
+    <HeroProjects />
+    <CTA
+      title="Soluciones de Construcción Personalizadas"
+      description="Somos una empresa de construcción comprometida con la excelencia y la satisfacción del cliente."
+    />
+    <HeroServices />
+    <CTA title="Suscríbete para recibir actualizaciones exclusivas" description="Mantente al día con nuestros proyectos y noticias de la industria" />
+  </main>
+</Layout>

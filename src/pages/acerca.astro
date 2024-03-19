@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroProjects from "../components/HeroProjects.astro";
+import CTA from "../components/CTA.astro";
+import TeamMenber from "../components/TeamMenber.astro";
+import Card from "../components/Card.astro";
+import type { Code } from "astro:components";
+
+const seoProps = {
+  title: "Acerca de Orion Stars Panama - Nuestra Misión y Visión",
+  description:
+    "Conoce más sobre Orion Stars Panama, nuestra misión de colaborar proactivamente en el desarrollo del país, y nuestra visión de ser líderes en construcción y consultoría.",
+  canonicalUrl: "https://ostarscompany.com/acerca/",
+  ogTitle: "Conoce a Orion Stars Panama - Compromiso y Excelencia",
+  ogDescription:
+    "Descubre el equipo detrás de Orion Stars Panama, impulsados por una misión de excelencia en construcción y una visión de liderazgo en consultoría.",
+  ogImage: "https://ostarscompany.com/public/remodelaciones-galera.jpg",
+  twitterTitle: "Orion Stars Panama: Nuestra Historia y Valores",
+  twitterDescription: "Aprende sobre la dedicación y el equipo de Orion Stars Panama, comprometidos con la calidad y el desarrollo sostenible.",
+  twitterImage: "https://ostarscompany.com/public/remodelaciones-galera.jpg",
+};
+---
+
+<Layout {...seoProps}>
+  <main>
+    <Card
+      fullScreen={false}
+      title="Conoce más de quienes somos y nuestro equipo"
+      description="Nuestro objetivo es brindar a nuestros clientes una asesoría integral y de alta calidad para el planeamiento y desarrollo de obras de infraestructura de excelencia."
+      buttons={false}
+    />
+    <div class="container max-w-[1440px] mx-auto bg-orion-blue-50 py-16 px-16">
+      <div class="min-h-[700px] flex flex-col justify-center">
+        <div class="text-center">
+          <h2 class="text-3xl text-orion-gray-600 font-semibold">Nuestro Equipo</h2>
+          <p class="pt-2 text-orion-gray-600">Conoce nuestro gran equipo de trabajo</p>
+        </div>
+        <div class="container max-w-[1440px] flex justify-center pt-12 md:pb-32 text-orion-gray-600">
+          <TeamMenber
+            name="Ing. José B.Donato Mock"
+            title="Representante Legal"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          />
+        </div>
+        <div class="grid sm:grid-cols-4 gap-12 sm:gap-6 text-orion-gray-600 py-12 mx-auto">
+          <TeamMenber
+            name="Ing. Carlos A.Quintero "
+            title="Técnico Responsable de Empresa"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          />
+          <TeamMenber name="Jesus Moreno" title="Agente Residente" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          <TeamMenber name="Tamitzi G. Donato Mock" title="Tesorero" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          <TeamMenber name="Astevia del Carmen" title="Secretaria" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-2 text-center">
+        <div id="right-col" class="aspect-square flex flex-col justify-center bg-orion-gray-950 p-16">
+          <h2 class="font-semibold text-orion-gray-50 text-3xl">Nuestra Misión</h2>
+          <p class="text-orion-gray-50 pt-2">
+            Nuestra misión como empresa es colaborar de manera proactiva en el desarrollo de nuestro país y con atención al crecimiento y necesidades
+            de nuestros clientes.
+          </p>
+          <!-- <p class="text-orion-gray-50 pt-2">
+            Desarrollando proyectos, y construcciones con los más exigentes estándares, en seguridad, calidad y puntualidad.
+          </p> -->
+        </div>
+        <div id="left-col" class="aspect-square flex flex-col justify-center bg-orion-gray-600 p-16">
+          <h2 class="font-semibold text-orion-gray-50 text-3xl">Nuestra Visión</h2>
+          <p class="text-orion-gray-50 pt-2">
+            Crecer manteniéndonos como una empresa solida líder en construcción y consultoría, reconocida por su capacidad, calidad y cumplimiento
+            basándonos en la preparación, experiencia y confianza.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <CTA
+      title="Soluciones de Construcción Personalizadas"
+      description="Somos una empresa de construcción comprometida con la excelencia y la satisfacción del cliente."
+    />
+  </main>
+</Layout>

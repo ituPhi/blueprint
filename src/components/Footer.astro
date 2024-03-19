@@ -1,0 +1,51 @@
+---
+import Image from "astro/components/Image.astro";
+// Footer links data
+const footerLinks = [
+  { href: "#", label: "Inicio" },
+  { href: "/services", label: "Servicios" },
+  { href: "/proyectos", label: "Proyectos" },
+  { href: "/acerca", label: "Acerca de" },
+  { href: "/contacto", label: "Contacto" },
+];
+
+// Social icons data
+const socialIcons = [
+  { href: "#", src: "/icons/FacebookIcn.svg", alt: "Facebook" },
+  { href: "#", src: "/icons/InstagramIcn.svg", alt: "Instagram" },
+  { href: "#", src: "/icons/XIcn.svg", alt: "X" },
+];
+---
+
+<footer class="bg-orion-gray-950 text-orion-gray-50 py-6 w-screen">
+  <div class="container max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center px-2 md:px-4">
+      <div id="footer-logo" class="flex items-center justify-center md:justify-start space-x-4 mb-4 md:mb-0">
+        <a href="/">
+          <Image src="/Logo Horizontal White.svg" alt="Orion Web Build" width={200} height={64} loading="eager" />
+        </a>
+      </div>
+      <div id="footer-links" class="flex items-center space-x-4 justify-center">
+        {
+          footerLinks.map((link) => (
+            <a href={link.href} class="text-sm text-nowrap">
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+      <div>
+        <div id="icons-social" class="flex items-center space-x-4 justify-center md:justify-end">
+          {
+            socialIcons.map((icon) => (
+              <a href={icon.href} class="text-white pt-4 md:pt-0 text-sm">
+                <Image src={icon.src} alt={icon.alt} width={24} height={24} loading="eager" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <hr class="border-t border-orion-gray-700 my-4" />
+  </div>
+</footer>

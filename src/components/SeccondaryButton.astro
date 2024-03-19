@@ -1,0 +1,12 @@
+---
+const { href = "#", label = "Learn more", extraClasses = "" } = Astro.props;
+---
+
+<a
+  href={href}
+  role="button"
+  class={`inline-block bg-transparent py-2 px-4 rounded-sm text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 ${extraClasses}`}
+  aria-label={label}
+>
+  {label}
+</a>
