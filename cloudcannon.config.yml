@@ -1,13 +1,13 @@
-source: /src/
+source:
 paths:
   uploads: public
   static: public
 collections_config:
   posts:
-    path: src/content/proyectos/posts
+    path: "src/content/proyectos/posts"
     output: true
     url: /proyectos/[slug]/
-    description: ''
+    description: ""
     icon: notes
     _editables:
     _inputs:
