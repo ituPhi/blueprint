@@ -3,6 +3,12 @@ paths:
   uploads_filename: src/content/proyectos/posts/
   static: public
   collections: /src/content
+
+source:
+_inputs:
+  src:
+    type: image
+
 collections_config:
   posts:
     path: src/content/proyectos/posts
@@ -12,8 +18,8 @@ collections_config:
     icon: notes
     _editables:
     _inputs:
-    src:
-      type: image
+      src:
+        type: image
     date:
       type: date
       options:

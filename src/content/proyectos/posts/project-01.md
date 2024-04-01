@@ -19,4 +19,5 @@ imgGal02Alt: An alternative description of the cover image
 imgGal03: ../images/proyecto-01/p1-03.jpg
 imgGal03Alt: An alternative description of the cover image
 ---
+
 Here is more detailed information about Project One
