@@ -1,6 +1,6 @@
 collections_config:
   posts:
-    path: src/content/proyectos
+    path: src/content/projects/*.md
 
 paths:
   uploads: public
