@@ -3,9 +3,7 @@ collections_config:
     paths: src/content/proyectos/
 
 paths:
-  uploads: uploads
-  static: ""
-  collections: ""
-  data: ""
-  layouts:
+  uploads: public
+  static: public
+
 timezone: Etc/UTC
