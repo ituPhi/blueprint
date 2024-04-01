@@ -8,20 +8,20 @@ const projectsCollection = defineCollection({
     tags: z.array(z.string()),
     objective: z.string(),
     client: z.string(),
-    coverImage: image().refine((img)=> img.width >= 100,{
+    cover_image: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
     coverAlt: z.string(),
   //   // Make these image fields optional
-    image01: image().refine((img)=> img.width >= 100,{
+    first_image: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
     image01Alt: z.string().optional(),
-    image02: image().refine((img)=> img.width >= 100,{
+    seccond_image: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
     image02Alt: z.string().optional(),
-    image03: image().refine((img)=> img.width >= 100,{
+    third_image: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
     image03Alt: z.string().optional(),
