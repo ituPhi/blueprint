@@ -1,6 +1,6 @@
 paths:
-  uploads: public
-  uploads_filename: src/content/proyectos/posts/
+  uploads: src/content/proyectos/images/
+  uploads_filename: /[...slugs]/
   static: public
   collections: /src/content
 collections_config:
