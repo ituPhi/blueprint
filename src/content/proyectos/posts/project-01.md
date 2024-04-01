@@ -10,7 +10,7 @@ tags:
   - design
 objective: Construcción Total de Estación de Servicio Terpel.
 client: Terpel Panamá
-cover_image: ../images/proyecto-01/p1-cover.jpg
+cover_image: /src/content/proyectos/images/[...slugs]/
 coverAlt: An alternative description of the cover image
 first_image: ../images/proyecto-01/p1-01.jpg
 image01Alt: An alternative description of the cover image
