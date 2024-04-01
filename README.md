@@ -1,4 +1,4 @@
-**Proyecto del Sitio Web VentureVista**
+**Proyecto del Sitio Web Blueprint**
 
 Bienvenido al repositorio del proyecto del sitio web de VentureVista, una plantilla moderna y ligera construida con Astro. Este proyecto está diseñado para ser una base versátil para cualquier tipo de sitio web, desde portfolios hasta sitios de empresas, aprovechando la eficiencia y la velocidad de Astro.
 
