@@ -3,6 +3,7 @@ paths:
   uploads_filename:
   static: public
   collections: /src/content
+
 collections_config:
   posts:
     path: src/content/proyectos/posts
