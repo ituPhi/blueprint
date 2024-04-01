@@ -8,23 +8,23 @@ const projectsCollection = defineCollection({
     tags: z.array(z.string()),
     objective: z.string(),
     client: z.string(),
-    cover: image().refine((img)=> img.width >= 100,{
+    coverImage: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
     coverAlt: z.string(),
     // Make these image fields optional
-    imgGal01: image().refine((img)=> img.width >= 100,{
+    image01: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
-    imgGal01Alt: z.string().optional(),
-    imgGal02: image().refine((img)=> img.width >= 100,{
+    image01Alt: z.string().optional(),
+    image02: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
-    imgGal02Alt: z.string().optional(),
-    imgGal03: image().refine((img)=> img.width >= 100,{
+    image02Alt: z.string().optional(),
+    image03: image().refine((img)=> img.width >= 100,{
       message:"Must be a cover image"
     }),
-    imgGal03Alt: z.string().optional(),
+    image03Alt: z.string().optional(),
     // Assuminz.string() a single alt text optional for all gallery images
     // If each image has its own alt text, you might want to define separate fields
   }),
