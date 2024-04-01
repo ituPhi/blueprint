@@ -2,7 +2,7 @@
 title: "Diseño de residencia unifamilia, FLIA, Cantando, Santa Marta, Bugaba"
 
 description: "This is a brief description of Project Three."
-fecha: 2024-01-01
+date: 2024-01-01
 tags: ["web", "design"]
 objective: "This is Our Objective"
 client: "Petrobrass"

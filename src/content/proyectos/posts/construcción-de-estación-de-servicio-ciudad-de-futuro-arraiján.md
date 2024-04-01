@@ -4,7 +4,7 @@ description: >-
   Instalación de Tanques soterrados (tuberías, electricidad, sumergibles, etc.),
   Construcción de Edificio de venta (baños, caja fuerte, oficinas, etc.)
   pavimentación de Pista y construcción de canopy.
-fecha: 2017-05-01
+date: 2017-05-01
 tags:
   - web
   - design
