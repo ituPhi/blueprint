@@ -3,35 +3,26 @@ paths:
   uploads_filename: src/content/proyectos/posts/
   static: public
   collections: /src/content
-
-source:
-_inputs:
-  src:
-    type: image
-
 collections_config:
   posts:
     path: src/content/proyectos/posts
-    output: true
+    output: false
     url: src/content/proyectos/posts
-    description: ""
+    description: ''
     icon: notes
     _editables:
     _inputs:
       src:
         type: image
-    date:
-      type: date
-      options:
-        timezone:
-        empty_type:
-        label: Date
         cascade: true
-        description: Post date
     _select_data:
     _structures:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
     schemas:
+_inputs:
+  src:
+    type: image
+    cascade: true
 timezone: Etc/UTC
