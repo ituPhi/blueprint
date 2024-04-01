@@ -4,8 +4,9 @@ paths:
 collections_config:
   posts:
     path: src/content/proyectos/posts
-    output: false
-    description: ''
+    output: true
+    url: /proyectos/[slug]/
+    description: ""
     icon: notes
     _editables:
     _inputs:
