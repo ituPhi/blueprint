@@ -8,13 +8,9 @@ collections_config:
     path: src/content/proyectos/posts
     output: false
     url: src/content/proyectos/posts
-    description: ''
+    description: ""
     icon: notes
     _editables:
-    _inputs:
-      src:
-        type: image
-        cascade: true
     _select_data:
     _structures:
     disable_add: false
