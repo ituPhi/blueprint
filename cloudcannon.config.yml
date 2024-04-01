@@ -25,4 +25,8 @@ _inputs:
   src:
     type: image
     cascade: true
+  date:
+    type: date
+    label: Date
+    cascade: true
 timezone: Etc/UTC
