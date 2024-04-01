@@ -7,10 +7,15 @@ collections_config:
   posts:
     path: src/content/proyectos/posts
     output: true
-    url: /proyectos/[...slug]/
+    url: src/content/proyectos/posts
     description: ''
     icon: notes
+    _editables:
+    _inputs:
+    _select_data:
+    _structures:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    schemas:
 timezone: Etc/UTC
