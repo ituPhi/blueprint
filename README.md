@@ -1,6 +1,6 @@
 **Proyecto del Sitio Web Blueprint**
 
-Bienvenido al repositorio del template Blueprint, una plantilla moderna y ligera construida con Astro. Este proyecto está diseñado para ser una base versátil para cualquier tipo de sitio web, desde portfolios hasta sitios de empresas, aprovechando la eficiencia y la velocidad de Astro.
+Bienvenido al repositorio del template Blueprint v.1.0, una plantilla moderna y ligera construida con Astro. Este proyecto está diseñado para ser una base versátil para cualquier tipo de sitio web, desde portfolios hasta sitios de empresas, aprovechando la eficiencia y la velocidad de Astro.
 
 ## Visión General
 
