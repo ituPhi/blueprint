@@ -154,13 +154,6 @@ declare module 'astro:content' {
   collection: "proyectos";
   data: InferEntrySchema<"proyectos">
 } & { render(): Render[".md"] };
-"posts/prueba-55.md": {
-	id: "posts/prueba-55.md";
-  slug: "posts/prueba-55";
-  body: string;
-  collection: "proyectos";
-  data: InferEntrySchema<"proyectos">
-} & { render(): Render[".md"] };
 "posts/yo-quiero-mucho-a-cachi-22.md": {
 	id: "posts/yo-quiero-mucho-a-cachi-22.md";
   slug: "posts/yo-quiero-mucho-a-cachi-22";
