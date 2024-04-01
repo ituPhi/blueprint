@@ -23,7 +23,7 @@ const slug = Array.isArray(slugs) ? slugs.join("/") : slugs;
 // Fetch the project entry using the slug
 const project = await getEntry("proyectos", slug);
 const { Content } = await project.render();
-const date = new Date(project.data.fecha);
+const date = new Date(project.data.date);
 const userTimezoneOffset = date.getTimezoneOffset() * 60000;
 const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
 ---
@@ -35,18 +35,18 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
     <meta name="description" content={`Learn more about ${project.data.title} - ${project.data.description}`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{project.data.title} - Orion Stars Panama</title>
-    <!-- Open Graph / Facebook Meta Tags -->
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ostarscompany.com/proyectos/${slug}`} />
     <meta property="og:title" content={project.data.title} />
     <meta property="og:description" content={project.data.description} />
-    <meta property="og:image" content={`https://ostarscompany.com/${project.data.cover}`} />
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:image" content={`https://ostarscompany.com/${project.data.coverImage}`} />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={`https://ostarscompany.com/proyectos/${slug}`} />
     <meta name="twitter:title" content={project.data.title} />
     <meta name="twitter:description" content={project.data.description} />
-    <meta name="twitter:image" content={`https://ostarscompany.com/${project.data.cover}`} />
+    <meta name="twitter:image" content={`https://ostarscompany.com/${project.data.coverImage}`} />
   </head>
 
   <body class="flex flex-col min-h-screen">
@@ -54,14 +54,7 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
     <article class="flex flex-col flex-grow">
       <div class="container max-w-[1440px] mx-auto text-orion-gray-50 flex flex-col flex-grow">
         <div class="max-h-[710px]">
-          <Image
-            src={project.data.cover}
-            alt={project.data.coverAlt}
-            class="object-cover object-top"
-            width={"1828"}
-            height={"700"}
-            quality={"high"}
-          />
+          <Image src={project.data.coverImage} alt="alt" class="object-cover object-top" width={"1828"} height={"700"} quality={"high"} />
         </div>
         <div id="card" class="p-2 sm:p-4 md:p-16 bg-orion-gray-600 py-12 flex-grows lg:px-32">
           <div class="flex flex-col sm:flex-row justify-between gap-16">
@@ -92,22 +85,22 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
     <div class="container max-w-[1440px] mx-auto">
       <div class="grid grid-cols-3">
         <Image
-          src={project.data.imgGal01}
-          alt={project.data.imgGal01Alt}
+          src={project.data.image01}
+          alt={project.data.image01Alt}
           class="object-cover w-full h-full aspect-square"
           width={"800"}
           height={"800"}
         />
         <Image
-          src={project.data.imgGal02}
-          alt={project.data.imgGal02Alt}
+          src={project.data.image02}
+          alt={project.data.image02Alt}
           class="object-cover w-full h-full aspect-square"
           width={"800"}
           height={"800"}
         />
         <Image
-          src={project.data.imgGal03}
-          alt={project.data.imgGal03Alt}
+          src={project.data.image03}
+          alt={project.data.image03Alt}
           class="object-cover w-full h-full aspect-square"
           width={"800"}
           height={"800"}
