@@ -1,5 +1,5 @@
 ---
-title: Mi post nuevo
+title: probrando
 description: >-
   Instalación de Tanques soterrados (tuberías, electricidad, sumergibles, etc.),
   Construcción de Edificio de venta (baños, caja fuerte, oficinas, etc.)
@@ -19,5 +19,4 @@ image02Alt: An alternative description of the cover image
 third_image: ../images/proyecto-01/p1-03.jpg
 image03Alt: An alternative description of the cover image
 ---
-
 Here is more detailed information about Project One
