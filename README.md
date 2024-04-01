@@ -1,10 +1,10 @@
 **Proyecto del Sitio Web Blueprint**
 
-Bienvenido al repositorio del proyecto del sitio web de VentureVista, una plantilla moderna y ligera construida con Astro. Este proyecto está diseñado para ser una base versátil para cualquier tipo de sitio web, desde portfolios hasta sitios de empresas, aprovechando la eficiencia y la velocidad de Astro.
+Bienvenido al repositorio del template Blueprint, una plantilla moderna y ligera construida con Astro. Este proyecto está diseñado para ser una base versátil para cualquier tipo de sitio web, desde portfolios hasta sitios de empresas, aprovechando la eficiencia y la velocidad de Astro.
 
 ## Visión General
 
-VentureVista incluye una amplia gama de componentes reutilizables y optimizados para la velocidad, como cabeceras dinámicas, secciones de características, banners, y más, todo construido utilizando Astro. Se integra con archivos markdown para contenido fácil de editar, soporte para Tailwind CSS para un diseño personalizable y configuraciones SEO avanzadas para maximizar la visibilidad en motores de búsqueda.
+Blueprint incluye una amplia gama de componentes reutilizables y optimizados para la velocidad, como cabeceras dinámicas, secciones de características, banners, y más, todo construido utilizando Astro. Se integra con archivos markdown para contenido fácil de editar, soporte para Tailwind CSS para un diseño personalizable y configuraciones SEO avanzadas para maximizar la visibilidad en motores de búsqueda.
 
 ## Estructura de Archivos
 
@@ -26,4 +26,4 @@ VentureVista incluye una amplia gama de componentes reutilizables y optimizados 
 - Utiliza Tailwind CSS para un diseño totalmente personalizable y Astro para generar sitios estáticos de alta velocidad.
 - Personaliza las propiedades SEO y el contenido para adaptar el sitio a tus necesidades específicas.
 
-Explora la base de código, adapta los componentes a tu proyecto y disfruta de la velocidad y flexibilidad que ofrece VentureVista!
+Explora la base de código, adapta los componentes a tu proyecto y disfruta de la velocidad y flexibilidad que ofrece Blueprint!
