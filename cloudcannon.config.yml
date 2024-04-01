@@ -1,9 +1,18 @@
-collections_config:
-  posts:
-    path: src/content/proyectos/posts
-
 paths:
   uploads: public
   static: public
-
+collections_config:
+  posts:
+    path: src/content/proyectos/posts
+    output: false
+    description: ''
+    icon: notes
+    _editables:
+    _inputs:
+    _select_data:
+    _structures:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
 timezone: Etc/UTC
