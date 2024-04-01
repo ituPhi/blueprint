@@ -1,7 +1,7 @@
 ---
 title: prueba 55
 description: Una prueba mas
-fecha: '2017-12-12'
+fecha: 2017-12-12
 tags:
   - web
   - design
