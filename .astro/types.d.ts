@@ -126,9 +126,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"proyectos": {
-"posts/construcción-de-estación-de-servicio-ciudad-de-futuro-arraiján.md": {
-	id: "posts/construcción-de-estación-de-servicio-ciudad-de-futuro-arraiján.md";
-  slug: "posts/construcción-de-estación-de-servicio-ciudad-de-futuro-arraiján";
+"posts/mi-post-nuevo-5512.md": {
+	id: "posts/mi-post-nuevo-5512.md";
+  slug: "posts/mi-post-nuevo-5512";
   body: string;
   collection: "proyectos";
   data: InferEntrySchema<"proyectos">
@@ -136,27 +136,6 @@ declare module 'astro:content' {
 "posts/project-01.md": {
 	id: "posts/project-01.md";
   slug: "posts/project-01";
-  body: string;
-  collection: "proyectos";
-  data: InferEntrySchema<"proyectos">
-} & { render(): Render[".md"] };
-"posts/project-02.md": {
-	id: "posts/project-02.md";
-  slug: "posts/project-02";
-  body: string;
-  collection: "proyectos";
-  data: InferEntrySchema<"proyectos">
-} & { render(): Render[".md"] };
-"posts/project-03.md": {
-	id: "posts/project-03.md";
-  slug: "posts/project-03";
-  body: string;
-  collection: "proyectos";
-  data: InferEntrySchema<"proyectos">
-} & { render(): Render[".md"] };
-"posts/yo-quiero-mucho-a-cachi-22.md": {
-	id: "posts/yo-quiero-mucho-a-cachi-22.md";
-  slug: "posts/yo-quiero-mucho-a-cachi-22";
   body: string;
   collection: "proyectos";
   data: InferEntrySchema<"proyectos">

@@ -8,15 +8,17 @@ collections_config:
     path: src/content/proyectos/posts
     output: true
     url: src/content/proyectos/posts
-    description: ''
+    description: ""
     icon: notes
     _editables:
     _inputs:
-      date:
-        type: date
-        options:
-          timezone:
-          empty_type:
+    src:
+      type: image
+    date:
+      type: date
+      options:
+        timezone:
+        empty_type:
         label: Date
         cascade: true
         description: Post date
