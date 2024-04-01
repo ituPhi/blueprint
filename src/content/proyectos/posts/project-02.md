@@ -8,16 +8,16 @@ tags: ["web", "design"]
 objective: "Construcción de Galera y Mesanine además de remodelación de áreas internas del resto
 del Molino."
 client: "Arroceras Miro"
-cover: "./images/proyecto-02/p2-cover.jpg"
+cover: "../images/proyecto-02/p2-cover.jpg"
 coverAlt: "An alternative description of the cover image"
 
-imgGal01: "./images/proyecto-02/p2-01.jpg"
+imgGal01: "../images/proyecto-02/p2-01.jpg"
 imgGal01Alt: "An alternative description of the cover image"
 
-imgGal02: "./images/proyecto-02/p2-02.jpg"
+imgGal02: "../images/proyecto-02/p2-02.jpg"
 imgGal02Alt: "An alternative description of the cover image"
 
-imgGal03: "./images/proyecto-02/p2-03.jpg"
+imgGal03: "../images/proyecto-02/p2-03.jpg"
 imgGal03Alt: "An alternative description of the cover image"
 ---
 
