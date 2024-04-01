@@ -16,7 +16,11 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-    schemas:
+    _inputs:
+      src:
+        type: image
+        cascade: true
+        schemas:
 _inputs:
   src:
     type: image
