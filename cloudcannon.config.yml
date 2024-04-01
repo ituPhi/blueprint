@@ -1,9 +1,10 @@
 collections_config:
   posts:
-    path: src/content/projects/posts
+    path: src/content/proyectos/posts
 
 paths:
   uploads: public
   static: public
 
 timezone: Etc/UTC
+w
