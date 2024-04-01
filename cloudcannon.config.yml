@@ -1,12 +1,15 @@
-source:
 paths:
   uploads: public
+  uploads_filename: src/content/proyectos/posts/
   static: public
 collections_config:
   posts:
-    path: "src/content/proyectos/posts"
+    path: src/content/proyectos/posts
     output: true
-    url: "/proyectos/[...slug]/"
-    description: ""
-
+    url: /proyectos/[...slug]/
+    description: ''
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
 timezone: Etc/UTC
