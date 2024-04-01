@@ -1,6 +1,6 @@
 paths:
   uploads: public
-  uploads_filename: /[...slugs]/
+  uploads_filename:
   static: public
   collections: /src/content
 collections_config:
