@@ -1,7 +1,11 @@
+collections_config:
+  posts:
+    paths: "src/content/proyectos/"
+
 paths:
   uploads: uploads
-  static: ''
-  collections: ''
-  data: ''
+  static: ""
+  collections: ""
+  data: ""
   layouts:
 timezone: Etc/UTC
