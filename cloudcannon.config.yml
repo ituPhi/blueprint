@@ -1,5 +1,5 @@
 paths:
-  uploads: src/content/proyectos/images/
+  uploads: public
   uploads_filename: /[...slugs]/
   static: public
   collections: /src/content
