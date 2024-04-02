@@ -12,7 +12,7 @@ objective: Construcción Total de Estación de Servicio Terpel.
 client: Terpel Panama
 cover_image: /38716372-1030901600400237-1289884760386043904-n.jpg
 coverAlt: An alternative description of the cover image
-first_image: ../images/proyecto-01/p1-01.jpg
+first_image: /p1-01.jpg
 image01Alt: An alternative description of the cover image
 seccond_image: /p1-02.jpg
 image02Alt: An alternative description of the cover image
