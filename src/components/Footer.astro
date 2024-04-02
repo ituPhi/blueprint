@@ -1,13 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-// Footer links data
-const footerLinks = [
-  { href: "#", label: "Inicio" },
-  { href: "/services", label: "Servicios" },
-  { href: "/proyectos", label: "Proyectos" },
-  { href: "/acerca", label: "Acerca de" },
-  { href: "/contacto", label: "Contacto" },
-];
+import footerLinks from "../data/navData.json";
 
 // Social icons data
 const socialIcons = [
@@ -29,7 +22,7 @@ const socialIcons = [
         {
           footerLinks.map((link) => (
             <a href={link.href} class="text-sm text-nowrap">
-              {link.label}
+              {link.name}
             </a>
           ))
         }
