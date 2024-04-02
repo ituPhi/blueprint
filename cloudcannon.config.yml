@@ -4,6 +4,9 @@ paths:
   static: public
   collections: /src/content
 
+site_data:
+  path: src/data
+
 collections_config:
   posts:
     path: src/content/proyectos/posts

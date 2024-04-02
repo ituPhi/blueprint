@@ -133,6 +133,20 @@ declare module 'astro:content' {
   collection: "proyectos";
   data: InferEntrySchema<"proyectos">
 } & { render(): Render[".md"] };
+"posts/this-is-my-third-post.md": {
+	id: "posts/this-is-my-third-post.md";
+  slug: "posts/this-is-my-third-post";
+  body: string;
+  collection: "proyectos";
+  data: InferEntrySchema<"proyectos">
+} & { render(): Render[".md"] };
+"posts/this-is-the-second-post.md": {
+	id: "posts/this-is-the-second-post.md";
+  slug: "posts/this-is-the-second-post";
+  body: string;
+  collection: "proyectos";
+  data: InferEntrySchema<"proyectos">
+} & { render(): Render[".md"] };
 };
 
 	};
