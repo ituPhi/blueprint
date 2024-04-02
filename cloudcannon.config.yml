@@ -5,7 +5,7 @@ paths:
   collections: /src/content
 
 collections_config:
-  site_data:
+  nav_data:
     path: src/data
   posts:
     path: src/content/proyectos/posts
