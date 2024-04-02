@@ -1,0 +1,34 @@
+
+  
+  {
+    "navData":[
+  {    "name": "Inicio",
+      "href": "/",
+      "active": "currentPath === ''"},
+      {
+        "name": "Servicios",
+        "href": "/services",
+        "active": "currentPath === 'services'"
+      },
+      {
+        "name": "Proyectos",
+        "href": "/proyectos",
+        "active": "currentPath === 'proyectos'"
+      },
+      {
+        "name": "Acerca de",
+        "href": "/acerca",
+        "active": "currentPath === 'acerca'"
+      },
+      {
+        "name": "Contacto",
+        "href": "/contacto",
+        "active": "currentPath === 'contacto'"
+      }
+    ]
+  }
+  
+  
+
+
+
