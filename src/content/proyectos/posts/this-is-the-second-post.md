@@ -8,7 +8,7 @@ date: 2017-05-11T00:00:00Z
 tags:
   - web
   - design
-objective: ' Total de Estación de Servicio Terpel.'
+objective: ' Total de Estación de Servicio Terpel'
 client: Terpel Panama
 cover_image: /18402091-762858367204563-2492656860210836876-o.jpg
 coverAlt: An alternative description of the cover image
