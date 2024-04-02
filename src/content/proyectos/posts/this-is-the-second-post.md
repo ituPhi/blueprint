@@ -1,5 +1,5 @@
 ---
-title: probrando
+title: 'This is the second post '
 description: >-
   Instalación de Tanques soterrados (tuberías, electricidad, sumergibles, etc.),
   Construcción de Edificio de venta (baños, caja fuerte, oficinas, etc.)
@@ -10,13 +10,12 @@ tags:
   - design
 objective: Construcción Total de Estación de Servicio Terpel.
 client: Terpel Panama
-cover_image: /38716372-1030901600400237-1289884760386043904-n.jpg
+cover_image: /18402091-762858367204563-2492656860210836876-o.jpg
 coverAlt: An alternative description of the cover image
-first_image: /p1-01.jpg
+first_image: /image-7.jpeg
 image01Alt: An alternative description of the cover image
-seccond_image: /p1-02.jpg
+seccond_image: /image-13.jpeg
 image02Alt: An alternative description of the cover image
-third_image: /p1-03.jpg
+third_image: /image-24.jpeg
 image03Alt: An alternative description of the cover image
 ---
-Here is more detailed information about Project OneasdASDsadsD
