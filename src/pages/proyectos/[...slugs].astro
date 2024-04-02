@@ -40,21 +40,21 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
     <meta property="og:url" content={`https://ostarscompany.com/proyectos/${slug}`} />
     <meta property="og:title" content={project.data.title} />
     <meta property="og:description" content={project.data.description} />
-    <meta property="og:image" content={`https://ostarscompany.com/${project.data.coverImage}`} />
+    <meta property="og:image" content={`https://ostarscompany.com/${project.data.cover_image}`} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={`https://ostarscompany.com/proyectos/${slug}`} />
     <meta name="twitter:title" content={project.data.title} />
     <meta name="twitter:description" content={project.data.description} />
-    <meta name="twitter:image" content={`https://ostarscompany.com/${project.data.coverImage}`} />
+    <meta name="twitter:image" content={`https://ostarscompany.com/${project.data.cover_image}`} />
   </head>
 
   <body class="flex flex-col min-h-screen">
     <NavBar />
     <article class="flex flex-col flex-grow">
       <div class="container max-w-[1440px] mx-auto text-orion-gray-50 flex flex-col flex-grow">
-        <div class="max-h-[710px]">
-          <Image src={project.data.cover_image} alt="alt" class="object-cover object-top" width={"1828"} height={"700"} quality={"high"} />
+        <div class="max-h-[710px] overflow-hidden">
+          <Image src={project.data.cover_image} alt="alt" class="object-contain" width={"1828"} height={"700"} quality={"high"} />
         </div>
         <div id="card" class="p-2 sm:p-4 md:p-16 bg-orion-gray-600 py-12 flex-grows lg:px-32">
           <div class="flex flex-col sm:flex-row justify-between gap-16">
@@ -83,7 +83,7 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
       </div>
     </article>
     <div class="container max-w-[1440px] mx-auto">
-      <!-- <div class="grid grid-cols-3">
+      <div class="grid grid-cols-3">
         <Image
           src={project.data.first_image}
           alt={project.data.image01Alt}
@@ -91,7 +91,7 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
           width={"800"}
           height={"800"}
         />
-        <Image
+        <!-- <Image
           src={project.data.seccond_image}
           alt={project.data.image02Alt}
           class="object-cover w-full h-full aspect-square"
@@ -103,9 +103,9 @@ const adjustedDate = new Date(date.getTime() + userTimezoneOffset);
           alt={project.data.image03Alt}
           class="object-cover w-full h-full aspect-square"
           width={"800"}
-          height={"800"}
+          height={"800"} -->
         />
-      </div> -->
+      </div>
     </div>
     <Footer />
   </body>

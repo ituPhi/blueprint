@@ -11,10 +11,10 @@ const projectsCollection = defineCollection({
     cover_image: z.string(),
     coverAlt: z.string(),
   //   // Make these image fields optional
-    // first_image: image().refine((img)=> img.width >= 100,{
-    //   message:"Must be a cover image"
-    // }),
-    // image01Alt: z.string().optional(),
+    first_image: image().refine((img)=> img.width >= 100,{
+      message:"Must be a cover image"
+    }),
+    image01Alt: z.string().optional(),
     // seccond_image: image().refine((img)=> img.width >= 100,{
     //   message:"Must be a cover image"
     // }),
