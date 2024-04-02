@@ -19,5 +19,4 @@ image02Alt: An alternative description of the cover image
 third_image: /p1-03.jpg
 image03Alt: An alternative description of the cover image
 ---
-
-Here is more detailed information about Project One
+Here is more detailed information about Project On
