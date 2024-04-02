@@ -4,10 +4,9 @@ paths:
   static: public
   collections: /src/content
 
-site_data:
-  path: src/data
-
 collections_config:
+  site_data:
+    path: src/data
   posts:
     path: src/content/proyectos/posts
     output: false
