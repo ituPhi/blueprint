@@ -1,4 +1,4 @@
-[
+const navData = [
   {
     href: "/",
     label: "Inicio",
@@ -25,3 +25,5 @@
     active: "currentPath === 'contacto'",
   },
 ];
+
+export default navData;
