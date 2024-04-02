@@ -1,7 +1,7 @@
 ---
 title: probrando
 description: >-
-  Instalación de Tanques soterrados (tuberías, electricidad, sumergibles, etc.),
+  Instalación de Tanques soterrados (tuerías, electricidad, sumergibles, etc.),
   Construcción de Edificio de venta (baños, caja fuerte, oficinas, etc.)
   pavimentación de Pista y construcción de canopy.
 date: 2017-05-10T00:00:00Z
