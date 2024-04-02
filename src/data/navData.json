@@ -1,7 +1,6 @@
 
   
-  {
-    "navData":[
+[
   {    "name": "Inicio",
       "href": "/",
       "active": "currentPath === ''"},
@@ -26,8 +25,7 @@
         "active": "currentPath === 'contacto'"
       }
     ]
-  }
-  
+
   
 
 
