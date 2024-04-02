@@ -1,28 +1,27 @@
-```json:src/data/navData.js
 [
   {
-    "href": "/",
-    "label": "Inicio",
-    "active": "currentPath === ''"
+    href: "/",
+    label: "Inicio",
+    active: "currentPath === ''",
   },
   {
-    "href": "/services",
-    "label": "Servicios",
-    "active": "currentPath === 'services'"
+    href: "/services",
+    label: "Servicios",
+    active: "currentPath === 'services'",
   },
   {
-    "href": "/proyectos",
-    "label": "Proyectos",
-    "active": "currentPath === 'proyectos'"
+    href: "/proyectos",
+    label: "Proyectos",
+    active: "currentPath === 'proyectos'",
   },
   {
-    "href": "/acerca",
-    "label": "Acerca de",
-    "active": "currentPath === 'acerca'"
+    href: "/acerca",
+    label: "Acerca de",
+    active: "currentPath === 'acerca'",
   },
   {
-    "href": "/contacto",
-    "label": "Contacto",
-    "active": "currentPath === 'contacto'"
-  }
-]
+    href: "/contacto",
+    label: "Contacto",
+    active: "currentPath === 'contacto'",
+  },
+];
