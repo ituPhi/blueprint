@@ -1,63 +1,106 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import "@fontsource-variable/montserrat";
+import "../globals.css";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 
 // Define navigation links as an array of objects
 const navLinks = [
-  { href: "/", label: "Inicio", active: currentPath === "" },
-  { href: "/services", label: "Servicios", active: currentPath === "services" },
-  { href: "/proyectos", label: "Proyectos", active: currentPath === "proyectos" },
-  { href: "/acerca", label: "Acerca de", active: currentPath === "acerca" },
-  { href: "/contacto", label: "Contacto", active: currentPath === "contacto" },
+    { href: "/", label: "Inicio", active: currentPath === "" },
+    {
+        href: "/services",
+        label: "Servicios",
+        active: currentPath === "services",
+    },
+    {
+        href: "/proyectos",
+        label: "Proyectos",
+        active: currentPath === "proyectos",
+    },
+    { href: "/acerca", label: "Acerca de", active: currentPath === "acerca" },
+    {
+        href: "/contacto",
+        label: "Contacto",
+        active: currentPath === "contacto",
+    },
 ];
 
 // Function to generate link class based on active state
-const getLinkClass = (isActive) => (isActive ? "text-orion-blue-700" : "text-gray-900 active:text-orion-blue-700 hover:text-orion-blue-700");
+const getLinkClass = (isActive) =>
+    isActive
+        ? "text-orion-blue-700"
+        : "font-sans text-gray-900 active:text-orion-blue-700 hover:text-orion-blue-700";
 ---
 
 <nav class="bg-gray-100 text-gray-900 absolute top-0 w-full px-4 py-3">
-  <div class="container max-w-[1440px] mx-auto flex items-center justify-between py-2">
-    <div class="flex items-center space-x-4">
-      <a href="/">
-        <Icon name={"logo"} width={150} height={50} class="text-white" />
-      </a>
+    <div
+        class="container max-w-[1440px] mx-auto flex items-center justify-between py-2"
+    >
+        <div class="flex items-center space-x-4">
+            <a href="/">
+                <Icon
+                    name={"logo"}
+                    width={150}
+                    height={50}
+                    class="text-white"
+                />
+            </a>
+        </div>
+        <div class="hidden space-x-4 md:flex">
+            {
+                navLinks.map((link) => (
+                    <a class={getLinkClass(link.active)} href={link.href}>
+                        {link.label}
+                    </a>
+                ))
+            }
+        </div>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden flex items-center">
+            <button
+                id="menuBtn"
+                class="text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900"
+                type="button"
+            >
+                <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path></svg
+                >
+            </button>
+        </div>
     </div>
-    <div class="hidden space-x-4 md:flex">
-      {
-        navLinks.map((link) => (
-          <a class={getLinkClass(link.active)} href={link.href}>
-            {link.label}
-          </a>
-        ))
-      }
+    <!-- Mobile Menu -->
+    <div class="hidden" id="menu">
+        <div class="pt-2 pb-3 space-y-1 flex flex-col">
+            {
+                navLinks.map((link) => (
+                    <a
+                        class={getLinkClass(link.active)}
+                        href={link.href}
+                        aria-label={link.label}
+                    >
+                        <div class="py-6 bg-gray-300 hover:bg-gray-200 pl-4 ">
+                            {link.label}
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
     </div>
-    <!-- Hamburger Icon for Mobile -->
-    <div class="md:hidden flex items-center">
-      <button id="menuBtn" class="text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900" type="button">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-          ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg
-        >
-      </button>
-    </div>
-  </div>
-  <!-- Mobile Menu -->
-  <div class="hidden" id="menu">
-    <div class="pt-2 pb-3 space-y-1 flex flex-col">
-      {
-        navLinks.map((link) => (
-          <a class={getLinkClass(link.active)} href={link.href} aria-label={link.label}>
-            <div class="py-6 bg-gray-300 hover:bg-gray-200 pl-4 ">{link.label}</div>
-          </a>
-        ))
-      }
-    </div>
-  </div>
 </nav>
 
 <script>
-  document.getElementById("menuBtn").addEventListener("click", function () {
-    document.getElementById("menu").classList.toggle("hidden");
-  });
+    document.getElementById("menuBtn").addEventListener("click", function () {
+        document.getElementById("menu").classList.toggle("hidden");
+    });
 </script>

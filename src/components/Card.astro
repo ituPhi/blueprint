@@ -2,34 +2,38 @@
 import PrimaryButton from "./PrimaryButton.astro";
 import SecondaryButton from "./SeccondaryButton.astro";
 const {
-  fullScreen = true,
-  buttons = true,
-  title = "Construcción e Infraestructura de Calidad",
-  description = "Somos una empresa de construcción especializada en ofrecer servicios integrales de consultoría para proyectos de infraestructura y construcción.",
+    fullScreen = true,
+    buttons = true,
+    title = "Construcción e Infraestructura de Calidad",
+    description = "Somos una empresa de construcción especializada en ofrecer servicios integrales de consultoría para proyectos de infraestructura y construcción.",
 } = Astro.props;
 
 // Extracted logic for class names into separate functions
 function getHideClass() {
-  return buttons ? "block" : "hidden";
+    return buttons ? "block" : "hidden";
 }
 
 function getPaddingXClass() {
-  return fullScreen ? "p-0" : "px-12";
+    return fullScreen ? "p-0" : "px-12";
 }
 
 function getBgColorClass() {
-  return fullScreen ? "bg-0" : "bg-gradient-to-r from-orion-gray-600 to-orion-gray-700";
+    return fullScreen
+        ? "bg-0"
+        : "bg-gradient-to-r from-orion-gray-600 to-orion-gray-700";
 }
 
 function getTitleScaleClass() {
-  return fullScreen ? "text-4xl md:text-5xl lg:text-6xl" : "text-3xl md:text-4xl lg:text-4xl";
+    return fullScreen
+        ? "text-4xl md:text-5xl lg:text-6xl"
+        : "text-3xl md:text-4xl lg:text-4xl";
 }
 
 function getYScaleClass() {
-  return fullScreen ? "lg:py-14" : "lg:py-16";
+    return fullScreen ? "lg:py-14" : "lg:py-16";
 }
 function getPtClass() {
-  return fullScreen ? "pt-0" : "pt-14";
+    return fullScreen ? "pt-0" : "pt-14";
 }
 
 const hide = getHideClass();
@@ -41,19 +45,27 @@ const ptClass = getPtClass();
 ---
 
 <div class={`w-full text-white ${ptClass}`}>
-  <div class={` container max-w-[1440px] mx-auto p-2 md:p-4 xlg:p-0 ${bgcolor}`}>
-    <div class={`grid md:grid-cols-2 ${yscale} gap-6 md:gap-20 py-12 px-2 md:${paddingX} items-center`}>
-      <h1 class={`${titleScale} font-bold max-w-[700px] text-balance slide-in-top `}>{title}</h1>
-      <div>
-        <p class="text-reg">
-          {description}
-        </p>
-        <div class={`flex items-center gap-4 py-6 ${hide}`}>
-          <!-- Use the button components -->
-          <PrimaryButton label="Descubrir" href="/services" />
-          <SecondaryButton label="Más información" href="/acerca" />
+    <div
+        class={` container max-w-[1440px] mx-auto p-2 md:p-4 xlg:p-0 ${bgcolor}`}
+    >
+        <div
+            class={`grid md:grid-cols-2 ${yscale} gap-6 md:gap-20 py-12 px-2 md:${paddingX} items-center`}
+        >
+            <h1
+                class={`${titleScale} font-sans font-bold max-w-[700px] text-balance slide-in-top `}
+            >
+                {title}
+            </h1>
+            <div>
+                <p class="text-reg">
+                    {description}
+                </p>
+                <div class={`flex items-center gap-4 py-6 ${hide}`}>
+                    <!-- Use the button components -->
+                    <PrimaryButton label="Descubrir" href="/services" />
+                    <SecondaryButton label="Más información" href="/acerca" />
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

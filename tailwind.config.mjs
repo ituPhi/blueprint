@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
+
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -7,7 +9,9 @@ export default {
         "med-title": "46px",
         reg: "16px",
       },
-      sans: ["Montserrat", "sans-serif"],
+      fontFamily: {
+        sans: ["Montserrat Variable", ...defaultTheme.fontFamily.sans],
+      },
 
       colors: {
         "orion-gray": {
